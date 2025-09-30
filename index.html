@@ -1,0 +1,351 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人作品集</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background-color: #030712;
+            color: #e5e7eb;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1440px;
+            margin: 0 auto;
+            height: 100vh;
+            display: flex;
+        }
+
+        .left-panel {
+            width: 40%;
+            background: #070a13;
+            padding: 40px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+            z-index: 10;
+            overflow-y: auto;
+            border-right: 1px solid #1e293b;
+        }
+
+        .right-panel {
+            width: 60%;
+            background: #0f172a;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #3b82f6;
+            margin: 0 auto 30px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #f8fafc;
+            position: relative;
+            padding-bottom: 8px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #3b82f6;
+        }
+
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .icon-item {
+            transition: all 0.3s ease;
+            opacity: 0.7;
+        }
+
+        .icon-item:hover {
+            opacity: 1;
+            transform: translateY(-3px);
+            color: #3b82f6;
+        }
+
+        .project-card {
+            background: #1e293b;
+            border-radius: 12px;
+            margin: 30px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            border-bottom: 1px solid #334155;
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #f8fafc;
+        }
+
+        .project-description {
+            color: #94a3b8;
+            line-height: 1.6;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            right: 30px;
+            bottom: 30px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-15px);}
+            60% {transform: translateY(-10px);}
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 20px;
+            border-left: 2px solid #3b82f6;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 0;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #3b82f6;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            background: rgba(59, 130, 246, 0.15);
+            color: #60a5fa;
+            padding: 5px 12px;
+            border-radius: 20px;
+            margin: 5px 5px 5px 0;
+            font-size: 0.85rem;
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container hide-scrollbar">
+    <!-- 左侧简历区域 -->
+    <div class="left-panel hide-scrollbar">
+        <div class="text-center">
+            <img src="assets/images/JianLiZhaoPian.jpg" alt="Professional portrait photo" id="1" class="avatar"><img
+            <h1 class="text-2xl font-bold mb-6">徐蒙</h1>
+            <p class="text-2xl text-cyan-400 mb-10">高级场景美术</p>
+        </div>
+
+        <div class="mb-10">
+            <h2 class="section-title">教育背景</h2>
+            <div class="timeline-item">
+                <h3 class="font-semibold text-lg">数字媒体艺术 本科</h3>
+                <p class="text-slate-400">金陵科技学院 | 2019-2023</p>
+            </div>
+        </div>
+
+        <div class="mb-10">
+            <h2 class="section-title">工作经历</h2>
+            <div class="timeline-item">
+                <h3 class="font-semibold text-lg">3D场景艺术家</h3>
+                <p class="text-slate-400">江苏原力数字科技股份有限公司 | 2022-2024</p>
+                <p class="mt-2">UE5番剧地编，游戏关卡设计师</p>
+            </div>
+            <div class="timeline-item">
+                <h3 class="font-semibold text-lg">Unity美术</h3>
+                <p class="text-slate-400">闻道之萌(南京)科技有限公司 | 2024-至今</p>
+                <p class="mt-2">仿真项目Unity场景美术</p>
+            </div>
+        </div>
+
+        <div class="mb-10">
+            <h2 class="section-title">技能专长</h2>
+            <div>
+                <span class="skill-tag">Unity</span>
+                <span class="skill-tag">UE5</span>
+                <span class="skill-tag">SP</span>
+                <span class="skill-tag">SD</span>
+                <span class="skill-tag">Maya</span>
+                <span class="skill-tag">ZB</span>
+            </div>
+        </div>
+
+        <div>
+            <h2 class="section-title">联系方式</h2>
+            <div class="space-y-2">
+                <p class="flex items-center">
+                    <span class="iconify mr-3" data-icon="mdi:email"></span>
+                    2542355162@qq.com
+                </p>
+                <p class="flex items-center">
+                    <span class="iconify mr-3" data-icon="mdi:phone"></span>
+                    +86 150 6223 2610
+                </p>
+                <p class="flex items-center">
+                    <span class="iconify mr-3" data-icon="mdi:map-marker"></span>
+                    江苏省南京市
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 右侧项目展示区 -->
+    <div class="right-panel hide-scrollbar">
+        <div class="py-10 px-12">
+            <h1 class="text-4xl font-bold mb-12">项目履历<span class="text-cyan-400">.</span></h1>
+
+            <!-- 项目1 -->
+            <div class="project-card">
+                <img src="assets/images/FanRenXiuXianZhuanXingHaiFeiChi_Test.jpg" alt="E-commerce dashboard interface with analytics charts" id="2" class="project-image">
+                <div class="project-content">
+                    <h2 class="project-title">凡人修仙传（星海飞驰）</h2>
+                    <p class="project-description">为凡人修仙传（星海飞驰）动画剧集进行场景搭建以及灯光布置</p>
+                </div>
+            </div>
+
+            <!-- 项目2 -->
+            <div class="project-card">
+                <img src="assets/images/FanRenXiuXianZhuanXingHaiFeiChi_Test.jpg" alt="Mobile banking app interface showing transaction history" id="3" class="project-image">
+                <div class="project-content">
+                    <h2 class="project-title">Higame（项目代号）</h2>
+                    <p class="project-description">UE5实时光照流程风格化次世代开放大世界游戏，在项目中完成从白盒到完整关卡搭建</p>
+                </div>
+            </div>
+
+            <!-- 项目3 -->
+            <div class="project-card">
+                <img src="assets/images/FanRenXiuXianZhuanXingHaiFeiChi_Test.jpg" alt="Health tracking dashboard with fitness metrics" id="4" class="project-image">
+                <div class="project-content">
+                    <h2 class="project-title">家用冰箱虚拟仿真教学</h2>
+                    <p class="project-description">为高校提供家用冰箱的运行方式虚拟仿真教学</p>
+                </div>
+            </div>
+            
+            <!-- 项目4 -->
+            <div class="project-card">
+                <img src="assets/images/FanRenXiuXianZhuanXingHaiFeiChi_Test.jpg" alt="Health tracking dashboard with fitness metrics" id="5" class="project-image">
+                <div class="project-content">
+                    <h2 class="project-title">大型冷库虚拟仿真教学</h2>
+                    <p class="project-description">为高校提供仿真冷库场景以及教学实验场景</p>
+                </div>
+            </div>
+
+            <!-- 项目5 -->
+            <div class="project-card">
+                <img src="assets/images/FanRenXiuXianZhuanXingHaiFeiChi_Test.jpg" alt="Educational platform interface with course modules" id="6" class="project-image">
+                <div class="project-content">
+                    <h2 class="project-title">中央空调（可搭建）虚拟仿真教学</h2>
+                    <p class="project-description">为高校提供模块化可搭建的教学场景，增加学生对于暖通项目的学习兴趣</p>
+                </div>
+            </div>
+
+            <!-- 项目6 -->
+            <div class="project-card">
+                <img src="assets/images/FanRenXiuXianZhuanXingHaiFeiChi_Test.jpg" alt="Travel planning mobile app with destination recommendations" id="7" class="project-image">
+                <div class="project-content">
+                    <h2 class="project-title">市政给排水虚拟仿真教学</h2>
+                    <p class="project-description">为高校制作市政给排水方面的教学内容</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span class="iconify text-3xl text-cyan-400" data-icon="mdi:chevron-double-down"></span>
+        </div>
+    </div>
+</div>
+
+<script>
+    // 滚动指示器动态效果
+    document.addEventListener('DOMContentLoaded', function() {
+        const rightPanel = document.querySelector('.right-panel');
+        const scrollIndicator = document.querySelector('.scroll-indicator');
+
+        rightPanel.addEventListener('scroll', function() {
+            const scrollPosition = this.scrollTop;
+            const maxScroll = this.scrollHeight - this.clientHeight;
+
+            if (scrollPosition > maxScroll - 50) {
+                scrollIndicator.style.opacity = '0';
+            } else {
+                scrollIndicator.style.opacity = '1';
+            }
+        });
+
+        // 项目卡片悬停效果增强
+        const projectCards = document.querySelectorAll('.project-card');
+        projectCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-8px)';
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+
+        // 图标悬停效果
+        const icons = document.querySelectorAll('.icon-item');
+        icons.forEach(icon => {
+            icon.addEventListener('mouseenter', () => {
+                icon.style.color = '#3b82f6';
+            });
+
+            icon.addEventListener('mouseleave', () => {
+                icon.style.color = '';
+            });
+        });
+    });
+</script>
+</body>
+</html>
