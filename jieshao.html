@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- 页面字符编码设置 -->
+    <meta charset="UTF-8">
+    <!-- 响应式布局视口设置 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 页面标题 -->
+    <title>XUMENG_CV</title>
+
+    <!-- 引入 Tailwind CSS 框架 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入 Iconify 图标库 -->
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+    <!-- 引入自定义样式表 -->
+    <link rel="stylesheet" href="css/Styles.css">
+
+    <style>
+        /* 响应式优化 */
+        @media (max-width: 768px) {
+            /* 在小屏幕上调整页面主容器方向为纵向排列 */
+            .flex.h-screen {
+                flex-direction: column;
+            }
+
+            /* 导航栏宽度占满屏幕，高度自动适应，最大不超过50%视窗高度 */
+            nav {
+                width: 100%;
+                height: auto;
+                max-height: 50vh;
+            }
+
+            /* 主体区域高度自适应 */
+            main {
+                height: auto;
+            }
+
+            /* 弹出窗口内容在移动端缩小并居中显示 */
+            .modal-content {
+                width: 95%;
+                margin: 10px auto;
+            }
+
+            /* 视频播放面板适配移动设备 */
+            .player-panel {
+                width: 95%;
+                height: 80vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<!-- 使用 Flexbox 构建整体布局，在大屏上横向排列，小屏上纵向排列 -->
+<div class="flex flex-col md:flex-row h-screen">
+    <!-- 左侧导航栏 -->
+    <nav class="w-full md:w-1/3 h-auto md:h-screen flex-shrink-0 border-r border-gray-900 overflow-y-auto p-4 md:p-8">
+        <!-- 头部个人信息展示区 -->
+        <div class="mb-8 md:mb-10 text-center">
+            <!-- 用户头像展示 -->
+            <div class="w-24 h-24 md:w-32 md:h-32 mx-auto mb-4 rounded-full overflow-hidden border border-gray-800">
+                <img src="assets/images/JianLiZhaoPian.png" alt="头像" class="w-full h-full object-contain" loading="lazy">
+            </div>
+            <!-- 姓名与职业 -->
+            <h1 class="text-2xl md:text-3xl font-light mb-2 gradient-text">徐蒙</h1>
+            <p class="text-gray-500 text-sm md:text-base">三维场景艺术家</p>
+        </div>
+
+        <!-- 教育背景模块 -->
+        <div class="mb-8 md:mb-10 pb-6 md:pb-8 border-b border-gray-900">
+            <h3 class="text-base md:text-lg text-gray-400 uppercase mb-3 md:mb-4 flex items-center font-bold">
+                <!-- 学校图标 -->
+                <iconify-icon icon="mdi:school" width="16" height="16" class="mr-2 md:mr-2"></iconify-icon>
+                教育背景
+            </h3>
+            <div class="flex flex-wrap items-center gap-2 mb-2">
+                <p class="text-white text-base md:text-lg font-medium">金陵科技学院</p>
+            </div>
+            <p class="text-xs md:text-sm text-gray-500 mb-2 md:mb-3">数字媒体艺术专业 · 学士</p>
+            <p class="text-xs text-gray-600 mt-1">2019.09 - 2023.06</p>
+        </div>
+
+        <!-- 就业经历模块 -->
+        <div class="mb-8 md:mb-10 pb-6 md:pb-8 border-b border-gray-900">
+            <h3 class="text-base md:text-lg text-gray-400 uppercase mb-3 md:mb-4 flex items-center font-bold">
+                <!-- 工作经验图标 -->
+                <iconify-icon icon="mdi:briefcase" width="16" height="16" class="mr-2 md:mr-2"></iconify-icon>
+                就业经历
+            </h3>
+            <div class="space-y-4 md:space-y-6">
+                <!-- 第一份工作经历 -->
+                <div class="border-l-2 border-gray-600 pl-3 md:pl-4 py-1">
+                    <div class="flex flex-wrap items-center gap-2 mb-2">
+                        <p class="text-white text-base md:text-lg font-medium">游戏影视三维场景艺术家</p>
+                        <span class="text-xs bg-blue-900 text-blue-300 px-2 py-1 rounded">2022.12 - 2024.11</span>
+                    </div>
+                    <p class="text-xs md:text-sm text-gray-500 mb-2 md:mb-3">江苏原力数字科技股份有限公司</p>
+                    <ul class="text-xs md:text-sm text-gray-400 space-y-2">
+                        <li class="flex"><span class="text-gray-500 mr-2">•</span>
+                            <span>2022.12-2023.06 进入岗位实习,期间进行了次时代模型全流程的工作以及影视地编岗位初步学习。</span>
+                        </li>
+                        <li class="flex"><span class="text-gray-500 mr-2">•</span>
+                            <span>在原力数字科技实习转正后，获得了公司的明日之星奖项，并且参与年会获奖，自我评价为生产型艺术家。</span>
+                        </li>
+                        <li class="flex"><span class="text-gray-500 mr-2">•</span>
+                            <span>2023.07-2024.05 负责凡人修仙传影视场景白盒搭建到最终渲染分镜场景。</span>
+                        </li>
+                        <li class="flex"><span class="text-gray-500 mr-2">•</span>
+                            <span>2024.06-2024.12 公司内转岗到游戏事业部,负责次时代3A三端开放大世界游戏的关卡设计工作,从白盒搭建到最终关卡以及场景性能优化和原画拆分及氛围图制作。</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 第二份工作经历 -->
+            <div class="border-l-2 border-gray-600 pl-3 md:pl-4 py-1 mt-4 md:mt-6">
+                <div class="flex flex-wrap items-center gap-2 mb-2">
+                    <p class="text-white text-base md:text-lg font-medium">虚拟仿真三维场景设计师</p>
+                    <span class="text-xs bg-blue-900 text-blue-300 px-2 py-1 rounded">2024.11 - 至今</span>
+                </div>
+                <p class="text-xs md:text-sm text-gray-500 mb-2 md:mb-3">闻道之萌(南京)科技有限公司</p>
+                <ul class="text-xs md:text-sm text-gray-400 space-y-2">
+                    <li class="flex"><span class="text-gray-500 mr-2">•</span>
+                        <span>负责数字孪生项目及可视化项目的Unity&UE5进行场景美术开发，涵盖灯光，地形，模型资产，场景性能监控，美术资产模块化拆分。</span>
+                    </li>
+                    <li class="flex"><span class="text-gray-500 mr-2">•</span>
+                        <span>负责场景中特效，Unity的shader和UE5母材质球制作。</span>
+                    </li>
+                    <li class="flex"><span class="text-gray-500 mr-2">•</span>
+                        <span>优化场景，使得项目可以适配桌面端，移动端，网页端。</span>
+                    </li>
+                    <li class="flex"><span class="text-gray-500 mr-2">•</span>
+                        <span>配合项目负责人在UE5中利用Sequence渲染高精度离线视频并剪辑成片。</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 技能专长模块 -->
+        <div class="mb-8 md:mb-10 pb-6 md:pb-8 border-b border-gray-900" id="skills-container">
+            <h3 class="text-base md:text-lg text-gray-400 uppercase mb-3 md:mb-4 flex items-center font-bold">
+                <!-- 技能图标 -->
+                <iconify-icon icon="mdi:tools" width="16" height="16" class="mr-2 md:mr-2"></iconify-icon>
+                技能专长
+            </h3>
+            <!-- 技能标签容器 -->
+            <div class="flex flex-wrap gap-2" id="skills-tags"></div>
+        </div>
+
+        <!-- 联系方式模块 -->
+        <div class="mb-6">
+            <h3 class="text-base md:text-lg text-gray-400 uppercase mb-3 md:mb-4 flex items-center font-bold">
+                <!-- 邮件图标 -->
+                <iconify-icon icon="mdi:email" width="16" height="16" class="mr-2 md:mr-2"></iconify-icon>
+                联系方式
+            </h3>
+            <div class="space-y-2 text-sm">
+                <!-- 邮箱地址 -->
+                <div class="flex items-center text-gray-400 hover:text-cyan-400 transition-colors cursor-pointer contact-item"
+                     data-text="2542355162@qq.com">
+                    <iconify-icon icon="mdi:email-outline" width="14" height="14" class="mr-2"></iconify-icon>
+                    2542355162@qq.com
+                    <iconify-icon icon="mdi:content-copy" width="14" height="14"
+                                  class="ml-2 opacity-0 transition-opacity"></iconify-icon>
+                </div>
+                <!-- 手机号码 -->
+                <div class="flex items-center text-gray-400 hover:text-cyan-400 transition-colors cursor-pointer contact-item"
+                     data-text="15062232610">
+                    <iconify-icon icon="mdi:phone" width="14" height="14" class="mr-2"></iconify-icon>
+                    15062232610
+                    <iconify-icon icon="mdi:content-copy" width="14" height="14"
+                                  class="ml-2 opacity-0 transition-opacity"></iconify-icon>
+                </div>
+                <!-- 微信号 -->
+                <div class="flex items-center text-gray-400 hover:text-cyan-400 transition-colors cursor-pointer contact-item"
+                     data-text="xm114628">
+                    <iconify-icon icon="mdi:wechat" width="14" height="14" class="mr-2"></iconify-icon>
+                    xm114628
+                    <iconify-icon icon="mdi:content-copy" width="14" height="14"
+                                  class="ml-2 opacity-0 transition-opacity"></iconify-icon>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 右侧主要内容区 -->
+    <main class="flex-grow overflow-y-auto w-full">
+        <div class="p-4 md:p-12">
+            <!-- 项目经历标题 -->
+            <header class="mb-8 md:mb-12">
+                <h2 class="text-3xl md:text-4xl mb-2 md:mb-3"><span class="gradient-text font-weight-600">项目经历</span></h2>
+                <p class="text-gray-500 text-sm md:text-base">以下展示个人作品和项目作品</p>
+            </header>
+            <!-- 项目卡片容器 -->
+            <div class="max-w-4xl mx-auto space-y-4 md:space-y-6 pb-16 md:pb-24" id="projects-container"></div>
+        </div>
+    </main>
+</div>
+
+<!-- 作品详情弹窗 -->
+<div id="detailModal" class="modal" onclick="modalManager.closeModalOnClickOutside(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <!-- 弹窗头部 -->
+        <div class="modal-header">
+            <h2 class="text-xl md:text-2xl gradient-text text-center flex-1" id="modalTitle">作品详情</h2>
+            <!-- 关闭按钮 -->
+            <button class="close-btn" onclick="modalManager.closeModal()">
+                <iconify-icon icon="mdi:close" width="20" height="20"></iconify-icon>
+            </button>
+        </div>
+        <!-- 弹窗主体内容 -->
+        <div class="modal-body">
+            <!-- 项目介绍区块 -->
+            <div class="mb-4 md:mb-6 p-4 md:p-6 bg-black border border-gray-900 rounded-lg">
+                <h3 class="text-lg md:text-xl mb-2 md:mb-3 gradient-text">项目介绍：</h3>
+                <p class="text-gray-400 leading-relaxed text-sm md:text-base" id="modalDescription"></p>
+            </div>
+            <!-- 相册展示区 -->
+            <div id="modalGallery" class="space-y-3 md:space-y-4"></div>
+        </div>
+    </div>
+</div>
+
+<!-- 浮动播放球 -->
+<div class="floating-ball" id="floatingBall">
+    <iconify-icon icon="mdi:play" width="20" height="20" id="ballIcon"></iconify-icon>
+</div>
+
+<!-- 视频播放器面板 -->
+<div class="player-panel" id="playerPanel">
+    <!-- 播放器头部 -->
+    <div class="player-header">
+        <h3 class="text-base md:text-lg gradient-text">视频播放器</h3>
+        <!-- 关闭按钮 -->
+        <button class="close-btn" onclick="mediaPlayer.closePlayer()">
+            <iconify-icon icon="mdi:close" width="16" height="16"></iconify-icon>
+        </button>
+    </div>
+    <!-- 视频播放区域 -->
+    <div class="player-video">
+        <iframe id="videoPlayer" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <!-- 控制条 -->
+    <div class="player-controls">
+        <div class="flex items-center justify-center flex-wrap gap-1 md:gap-2">
+            <!-- 上一个视频按钮 -->
+            <button class="control-btn" onclick="mediaPlayer.playPrevious()">
+                <iconify-icon icon="mdi:skip-previous" width="16" height="16"></iconify-icon>
+            </button>
+            <!-- 播放/暂停按钮 -->
+            <button class="control-btn" id="playPauseBtn" onclick="mediaPlayer.togglePlayPause()">
+                <iconify-icon icon="mdi:pause" width="16" height="16"></iconify-icon>
+            </button>
+            <!-- 下一个视频按钮 -->
+            <button class="control-btn" onclick="mediaPlayer.playNext()">
+                <iconify-icon icon="mdi:skip-next" width="16" height="16"></iconify-icon>
+            </button>
+        </div>
+    </div>
+    <!-- 播放列表 -->
+    <div class="playlist" id="playlist"></div>
+</div>
+
+<!-- 引入外部JavaScript资源 -->
+<script src="data/ProjectsData.js"></script>
+<script src="js/utils/Helpers.js"></script>
+<script src="js/components/GalleryItem.js"></script>
+<script src="js/components/SkillTag.js"></script>
+<script src="js/modules/MediaPlayer.js"></script>
+<script src="js/modules/ModalManager.js"></script>
+<script src="js/Main.js"></script>
+</body>
+</html>
