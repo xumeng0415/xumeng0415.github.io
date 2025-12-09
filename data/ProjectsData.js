@@ -91,51 +91,106 @@ const PROJECTS_DATA = [
     {
         id: 3,
         title: "家用冰箱虚拟仿真教学",
-        coverImage: "https://modao.cc/ai/uploads/ai_pics/0/2992/aigp_1749292044.jpeg",
-        description: "03。\n03。", // 项目描述
-        images: [ // 图片路径数组（未分组）
-            "https://modao.cc/ai/uploads/ai_pics/0/2992/aigp_1749292044.jpeg",
-            "https://modao.cc/ai/uploads/ai_pics/0/2992/aigp_1749292044.jpeg"
+        coverImage: "assets/images/家用冰箱虚拟仿真教学/家用冰箱虚拟仿真教学封面图.png",
+        description: "在项目中负责设计和开发家用冰箱的虚拟仿真教学场景，包括仿真所需模型的建模、特效。\n单人负责整个项目。", // 项目描述
+        imageGroups:  [
+            { 
+                title: "家用冰箱虚拟仿真教学",
+                images: [// 图片路径数组（未分组）
+            "assets/images/家用冰箱虚拟仿真教学/家用冰箱虚拟仿真教学01.png",
+            "assets/images/家用冰箱虚拟仿真教学/家用冰箱虚拟仿真教学02.png",
+            "assets/images/家用冰箱虚拟仿真教学/家用冰箱虚拟仿真教学03.png",
+            "assets/images/家用冰箱虚拟仿真教学/家用冰箱虚拟仿真教学04.png",
+            "assets/images/家用冰箱虚拟仿真教学/家用冰箱虚拟仿真教学05.png",
+            "assets/images/家用冰箱虚拟仿真教学/家用冰箱虚拟仿真教学06.png",
+            "assets/images/家用冰箱虚拟仿真教学/家用冰箱虚拟仿真教学07.png",
+            "assets/images/家用冰箱虚拟仿真教学/家用冰箱虚拟仿真教学08.png",
+            "assets/images/家用冰箱虚拟仿真教学/家用冰箱虚拟仿真教学09.png",
+            "assets/images/家用冰箱虚拟仿真教学/家用冰箱虚拟仿真教学10.png",
+            "assets/images/家用冰箱虚拟仿真教学/家用冰箱虚拟仿真教学11.png",
+            "assets/images/家用冰箱虚拟仿真教学/家用冰箱虚拟仿真教学12.png",
+            "assets/images/家用冰箱虚拟仿真教学/家用冰箱虚拟仿真教学13.png",
+            "assets/images/家用冰箱虚拟仿真教学/家用冰箱虚拟仿真教学14.png",
+            "assets/images/家用冰箱虚拟仿真教学/家用冰箱虚拟仿真教学15.png",
+            "assets/images/家用冰箱虚拟仿真教学/家用冰箱虚拟仿真教学16.png"
+            ]
+            }
         ]
     },
     {
         id: 4,
         title: "大型冷库虚拟仿真教学",
-        coverImage: "https://modao.cc/ai/uploads/ai_pics/0/2992/aigp_1749292044.jpeg",
-        description: "04。\n04。",
-        images: [
-            "https://modao.cc/ai/uploads/ai_pics/0/2992/aigp_1749292044.jpeg",
-            "https://modao.cc/ai/uploads/ai_pics/0/2992/aigp_1749292044.jpeg"
+        coverImage: "assets/images/大型冷库虚拟仿真教学/大型冷库虚拟仿真教学封面图.png",
+        description: "在项目中负责设计和开发大型冷库虚拟仿真教学场景，包括仿真所需模型的建模、特效。\n单人负责整个项目。",
+        imageGroups:  [
+            { 
+                title: "大型冷库虚拟仿真教学",
+                images: [// 图片路径数组（未分组）
+            "assets/images/大型冷库虚拟仿真教学/大型冷库虚拟仿真教学01.png",
+            "assets/images/大型冷库虚拟仿真教学/大型冷库虚拟仿真教学02.png"
+            ]
+            }
         ]
     },
     {
         id: 5,
         title: "市政给排水虚拟仿真教学",
-        coverImage: "https://modao.cc/ai/uploads/ai_pics/0/2992/aigp_1749292044.jpeg",
-        description: "05。\n05。",
-        images: [
-            "https://modao.cc/ai/uploads/ai_pics/0/2992/aigp_1749292044.jpeg",
-            "https://modao.cc/ai/uploads/ai_pics/0/2992/aigp_1749292044.jpeg"
+        coverImage: "assets/images/市政给排水虚拟仿真教学/市政给排水虚拟仿真教学封面图.png",
+        description: "在项目中负责设计和开发市政给排水虚拟仿真教学场景，包括仿真所需模型的建模、特效。\n单人负责整个项目。",
+        imageGroups:  [
+            { 
+                title: "市政给排水虚拟仿真教学",
+                images: [// 图片路径数组（未分组）
+            "assets/images/市政给排水虚拟仿真教学/市政给排水虚拟仿真教学01.png",
+            "assets/images/市政给排水虚拟仿真教学/市政给排水虚拟仿真教学02.png",
+            "assets/images/市政给排水虚拟仿真教学/市政给排水虚拟仿真教学03.png",
+            "assets/images/市政给排水虚拟仿真教学/市政给排水虚拟仿真教学04.png"
+            ]
+            }
         ]
     },
     {
         id: 6,
         title: "集中空调虚拟仿真教学",
-        coverImage: "https://modao.cc/ai/uploads/ai_pics/0/2992/aigp_1749292044.jpeg",
-        description: "06。\n06。",
-        images: [
-            "https://modao.cc/ai/uploads/ai_pics/0/2992/aigp_1749292044.jpeg",
-            "https://modao.cc/ai/uploads/ai_pics/0/2992/aigp_1749292044.jpeg"
+        coverImage: "assets/images/集中空调虚拟仿真教学/集中空调虚拟仿真教学封面图.png",
+        description: "在项目中负责设计和开发集中空调虚拟仿真教学场景，包括仿真所需模型的建模、特效。\n单人负责整个项目。",
+        imageGroups:  [
+            { 
+                title: "集中空调虚拟仿真教学",
+                images: [// 图片路径数组（未分组）
+            "assets/images/集中空调虚拟仿真教学/集中空调虚拟仿真教学01.png",
+            "assets/images/集中空调虚拟仿真教学/集中空调虚拟仿真教学02.png",
+            "assets/images/集中空调虚拟仿真教学/集中空调虚拟仿真教学03.png",
+            "assets/images/集中空调虚拟仿真教学/集中空调虚拟仿真教学04.png",
+            "assets/images/集中空调虚拟仿真教学/集中空调虚拟仿真教学05.png",
+            "assets/images/集中空调虚拟仿真教学/集中空调虚拟仿真教学06.png",
+            "assets/images/集中空调虚拟仿真教学/集中空调虚拟仿真教学07.png",
+            "assets/images/集中空调虚拟仿真教学/集中空调虚拟仿真教学08.png",
+            "assets/images/集中空调虚拟仿真教学/集中空调虚拟仿真教学09.png",
+            "assets/images/集中空调虚拟仿真教学/集中空调虚拟仿真教学10.png",
+            "assets/images/集中空调虚拟仿真教学/集中空调虚拟仿真教学11.png",
+            "assets/images/集中空调虚拟仿真教学/集中空调虚拟仿真教学12.png",
+            "assets/images/集中空调虚拟仿真教学/集中空调虚拟仿真教学13.png"
+            ]
+            }
         ]
     },
     {
         id: 7,
         title: "氢燃料电池虚拟仿真教学",
-        coverImage: "https://modao.cc/ai/uploads/ai_pics/0/2992/aigp_1749292044.jpeg",
-        description: "07。\n07。",
-        images: [
-            "https://modao.cc/ai/uploads/ai_pics/0/2992/aigp_1749292044.jpeg",
-            "https://modao.cc/ai/uploads/ai_pics/0/2992/aigp_1749292044.jpeg"
+        coverImage: "assets/images/氢燃料电池虚拟仿真教学/氢燃料电池虚拟仿真教学01.png",
+        description: "在项目中负责设计和开发氢燃料电池虚拟仿真教学场景，包括仿真所需模型的建模、特效。\n单人负责整个项目，还在进行中。",
+        imageGroups:  [
+            { 
+                title: "氢燃料电池虚拟仿真教学",
+                images: [// 图片路径数组（未分组）
+            "assets/images/氢燃料电池虚拟仿真教学/氢燃料电池虚拟仿真教学01.png",
+            "assets/images/氢燃料电池虚拟仿真教学/氢燃料电池虚拟仿真教学02.png",
+            "assets/images/氢燃料电池虚拟仿真教学/氢燃料电池虚拟仿真教学03.png",
+            "assets/images/氢燃料电池虚拟仿真教学/氢燃料电池虚拟仿真教学04.png",
+            "assets/images/氢燃料电池虚拟仿真教学/氢燃料电池虚拟仿真教学05.png"
+            ]
+            }
         ]
     }
 ];
