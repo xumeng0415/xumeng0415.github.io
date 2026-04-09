@@ -1,4 +1,4 @@
-﻿/**
+/**
  * 模态框管理器类
  * 负责处理项目展示和模态框的打开/关闭功能
  */
@@ -134,14 +134,31 @@ class ModalManager {
                 imagesContainer.className = 'space-y-4';
 
                 group.images.forEach(imgUrl => {
-                    const imgDiv = document.createElement('div');
-                    imgDiv.className = 'flex justify-center';
-                    imgDiv.innerHTML = `
-                    <div class="inline-block rounded-lg overflow-hidden border border-gray-900">
-                        <img src="${Utils.escapeHtml(imgUrl)}" alt="${Utils.escapeHtml(group.title)}" class="max-w-2xl h-auto" loading="lazy">
-                    </div>
-                `;
-                    imagesContainer.appendChild(imgDiv);
+                    const mediaDiv = document.createElement('div');
+                    mediaDiv.className = 'flex justify-center';
+                    
+                    // 检查是否为视频文件
+                    const isVideo = /\.(mp4|webm|avi|mov|wmv)$/i.test(imgUrl);
+                    
+                    if (isVideo) {
+                        // 渲染视频元素
+                        mediaDiv.innerHTML = `
+                            <div class="inline-block rounded-lg overflow-hidden border border-gray-900">
+                                <video src="${Utils.escapeHtml(imgUrl)}" alt="${Utils.escapeHtml(group.title)}" class="max-w-2xl h-auto" controls>
+                                    您的浏览器不支持视频播放。
+                                </video>
+                            </div>
+                        `;
+                    } else {
+                        // 渲染图片元素
+                        mediaDiv.innerHTML = `
+                            <div class="inline-block rounded-lg overflow-hidden border border-gray-900">
+                                <img src="${Utils.escapeHtml(imgUrl)}" alt="${Utils.escapeHtml(group.title)}" class="max-w-2xl h-auto" loading="lazy">
+                            </div>
+                        `;
+                    }
+                    
+                    imagesContainer.appendChild(mediaDiv);
                 });
 
                 groupContainer.appendChild(imagesContainer);
@@ -150,19 +167,39 @@ class ModalManager {
         } else if (project.images) {
             // 兼容旧的数据结构
             project.images.forEach((imgUrl, index) => {
-                const imgContainer = document.createElement('div');
-                imgContainer.className = 'mb-6';
-                imgContainer.innerHTML = `
-                <div class="mb-3 p-3 bg-gray-900 rounded-lg">
-                    <h4 class="text-lg font-medium gradient-text">图片 ${index + 1}</h4>
-                </div>
-                <div class="flex justify-center">
-                    <div class="inline-block rounded-lg overflow-hidden border border-gray-900">
-                        <img src="${Utils.escapeHtml(imgUrl)}" alt="${Utils.escapeHtml(project.title)} - 图片 ${index + 1}" class="max-w-2xl h-auto" loading="lazy">
+                const mediaContainer = document.createElement('div');
+                mediaContainer.className = 'mb-6';
+                
+                // 检查是否为视频文件
+                const isVideo = /\.(mp4|webm|avi|mov|wmv)$/i.test(imgUrl);
+                
+                if (isVideo) {
+                    mediaContainer.innerHTML = `
+                    <div class="mb-3 p-3 bg-gray-900 rounded-lg">
+                        <h4 class="text-lg font-medium gradient-text">视频 ${index + 1}</h4>
                     </div>
-                </div>
-            `;
-                galleryContainer.appendChild(imgContainer);
+                    <div class="flex justify-center">
+                        <div class="inline-block rounded-lg overflow-hidden border border-gray-900">
+                            <video src="${Utils.escapeHtml(imgUrl)}" alt="${Utils.escapeHtml(project.title)} - 视频 ${index + 1}" class="max-w-2xl h-auto" controls>
+                                您的浏览器不支持视频播放。
+                            </video>
+                        </div>
+                    </div>
+                `;
+                } else {
+                    mediaContainer.innerHTML = `
+                    <div class="mb-3 p-3 bg-gray-900 rounded-lg">
+                        <h4 class="text-lg font-medium gradient-text">图片 ${index + 1}</h4>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="inline-block rounded-lg overflow-hidden border border-gray-900">
+                            <img src="${Utils.escapeHtml(imgUrl)}" alt="${Utils.escapeHtml(project.title)} - 图片 ${index + 1}" class="max-w-2xl h-auto" loading="lazy">
+                        </div>
+                    </div>
+                `;
+                }
+                
+                galleryContainer.appendChild(mediaContainer);
             });
         }
     }

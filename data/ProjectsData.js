@@ -15,6 +15,22 @@ const PROJECTS_DATA = [
         description: "在《凡人修仙传:星海飞驰》中负责镜头灯光场景细化以及场景地编制作。\n镜头制作了73-124集中的大量镜头。\n场景负责了虚天殿电梯和七玄门断崖场景制作。", // 项目描述
         imageGroups: [ // 图片分组展示
             {
+                title: "虚天殿电梯场景",
+                images: [
+                    "assets/images/凡人修仙传/凡人修仙传虚天殿电梯01.png",
+                    "assets/images/凡人修仙传/凡人修仙传虚天殿电梯02.png",
+                    "assets/images/凡人修仙传/凡人修仙传虚天殿电梯03.png",
+                    "assets/images/凡人修仙传/凡人修仙传虚天殿电梯04.png"
+                ]
+            },
+            {
+                title: "七玄门断崖场景",
+                images: [
+                    "assets/images/凡人修仙传/凡人修仙传七玄门断崖01.png",
+                    "assets/images/凡人修仙传/凡人修仙传七玄门断崖02.png",
+                ]
+            },
+            {
                 title: "参与番剧镜头截图", // 图片组标题
                 images: [ // 图片路径数组
                     "assets/images/凡人修仙传/凡人修仙传番剧镜头截图01.png",
@@ -29,22 +45,6 @@ const PROJECTS_DATA = [
                     "assets/images/凡人修仙传/凡人修仙传番剧镜头截图10.png",
                     "assets/images/凡人修仙传/凡人修仙传番剧镜头截图11.png",
                     "assets/images/凡人修仙传/凡人修仙传番剧镜头截图12.png"
-                ]
-            },
-            {
-                title: "虚天殿电梯场景",
-                images: [
-                    "assets/images/凡人修仙传/凡人修仙传虚天殿电梯01.png",
-                    "assets/images/凡人修仙传/凡人修仙传虚天殿电梯02.png",
-                    "assets/images/凡人修仙传/凡人修仙传虚天殿电梯03.png",
-                    "assets/images/凡人修仙传/凡人修仙传虚天殿电梯04.png"
-                ]
-            },
-            {
-                title: "七玄门断崖场景",
-                images: [
-                    "assets/images/凡人修仙传/凡人修仙传七玄门断崖01.png",
-                    "assets/images/凡人修仙传/凡人修仙传七玄门断崖02.png",
                 ]
             }
         ]
@@ -83,7 +83,8 @@ const PROJECTS_DATA = [
                     "assets/images/Higame/Higame地编场景06.png",
                     "assets/images/Higame/Higame地编场景07.png",
                     "assets/images/Higame/Higame地编场景08.png",
-                    "assets/images/Higame/Higame地编场景09.png"
+                    "assets/images/Higame/Higame地编场景09.png",
+                    "assets/images/Higame/Higame地编场景10.png"
                 ]
             }
         ]
@@ -92,7 +93,7 @@ const PROJECTS_DATA = [
         id: 3,
         title: "家用冰箱虚拟仿真教学",
         coverImage: "assets/images/家用冰箱虚拟仿真教学/家用冰箱虚拟仿真教学封面图.png",
-        description: "在项目中负责设计和开发家用冰箱的虚拟仿真教学场景，包括仿真所需模型的建模、特效。\n单人负责整个项目。", // 项目描述
+        description: "在项目中负责设计和开发家用冰箱的虚拟仿真教学场景，包括仿真所需模型的建模、特效。\n单人负责整个项目场景美术。", // 项目描述
         imageGroups:  [
             { 
                 title: "家用冰箱虚拟仿真教学",
@@ -121,7 +122,7 @@ const PROJECTS_DATA = [
         id: 4,
         title: "大型冷库虚拟仿真教学",
         coverImage: "assets/images/大型冷库虚拟仿真教学/大型冷库虚拟仿真教学封面图.png",
-        description: "在项目中负责设计和开发大型冷库虚拟仿真教学场景，包括仿真所需模型的建模、特效。\n单人负责整个项目。",
+        description: "在项目中负责设计和开发大型冷库虚拟仿真教学场景，包括仿真所需模型的建模、特效。\n单人负责整个项目场景美术。",
         imageGroups:  [
             { 
                 title: "大型冷库虚拟仿真教学",
@@ -136,7 +137,7 @@ const PROJECTS_DATA = [
         id: 5,
         title: "市政给排水虚拟仿真教学",
         coverImage: "assets/images/市政给排水虚拟仿真教学/市政给排水虚拟仿真教学封面图.png",
-        description: "在项目中负责设计和开发市政给排水虚拟仿真教学场景，包括仿真所需模型的建模、特效。\n单人负责整个项目。",
+        description: "在项目中负责设计和开发市政给排水虚拟仿真教学场景，包括仿真所需模型的建模、特效。\n单人负责整个项目场景美术。",
         imageGroups:  [
             { 
                 title: "市政给排水虚拟仿真教学",
@@ -153,7 +154,7 @@ const PROJECTS_DATA = [
         id: 6,
         title: "集中空调虚拟仿真教学",
         coverImage: "assets/images/集中空调虚拟仿真教学/集中空调虚拟仿真教学封面图.png",
-        description: "在项目中负责设计和开发集中空调虚拟仿真教学场景，包括仿真所需模型的建模、特效。\n单人负责整个项目。",
+        description: "在项目中负责设计和开发集中空调虚拟仿真教学场景，包括仿真所需模型的建模、特效。\n单人负责整个项目场景美术。",
         imageGroups:  [
             { 
                 title: "集中空调虚拟仿真教学",
@@ -170,7 +171,12 @@ const PROJECTS_DATA = [
             "assets/images/集中空调虚拟仿真教学/集中空调虚拟仿真教学10.png",
             "assets/images/集中空调虚拟仿真教学/集中空调虚拟仿真教学11.png",
             "assets/images/集中空调虚拟仿真教学/集中空调虚拟仿真教学12.png",
-            "assets/images/集中空调虚拟仿真教学/集中空调虚拟仿真教学13.png"
+            "assets/images/集中空调虚拟仿真教学/集中空调虚拟仿真教学13.png",
+            "assets/images/集中空调虚拟仿真教学/集中空调虚拟仿真教学14.png",
+            "assets/images/集中空调虚拟仿真教学/集中空调虚拟仿真教学15.png",
+            "assets/images/集中空调虚拟仿真教学/集中空调虚拟仿真教学16.png",
+            "assets/images/集中空调虚拟仿真教学/集中空调虚拟仿真教学17.png",
+            "assets/images/集中空调虚拟仿真教学/集中空调虚拟仿真教学18.png"
             ]
             }
         ]
@@ -178,8 +184,8 @@ const PROJECTS_DATA = [
     {
         id: 7,
         title: "氢燃料电池虚拟仿真教学",
-        coverImage: "assets/images/氢燃料电池虚拟仿真教学/氢燃料电池虚拟仿真教学01.png",
-        description: "在项目中负责设计和开发氢燃料电池虚拟仿真教学场景，包括仿真所需模型的建模、特效。\n单人负责整个项目，还在进行中。",
+        coverImage: "assets/images/氢燃料电池虚拟仿真教学/氢燃料电池虚拟仿真教学封面图.png",
+        description: "在项目中负责设计和开发氢燃料电池虚拟仿真教学场景，包括仿真所需模型的建模、特效。\n单人负责整个项目。",
         imageGroups:  [
             { 
                 title: "氢燃料电池虚拟仿真教学",
@@ -188,7 +194,143 @@ const PROJECTS_DATA = [
             "assets/images/氢燃料电池虚拟仿真教学/氢燃料电池虚拟仿真教学02.png",
             "assets/images/氢燃料电池虚拟仿真教学/氢燃料电池虚拟仿真教学03.png",
             "assets/images/氢燃料电池虚拟仿真教学/氢燃料电池虚拟仿真教学04.png",
-            "assets/images/氢燃料电池虚拟仿真教学/氢燃料电池虚拟仿真教学05.png"
+            "assets/images/氢燃料电池虚拟仿真教学/氢燃料电池虚拟仿真教学05.png",
+            "assets/images/氢燃料电池虚拟仿真教学/氢燃料电池虚拟仿真教学06.png",
+            "assets/images/氢燃料电池虚拟仿真教学/氢燃料电池虚拟仿真教学07.png",
+            "assets/images/氢燃料电池虚拟仿真教学/氢燃料电池虚拟仿真教学08.png",
+            "assets/images/氢燃料电池虚拟仿真教学/氢燃料电池虚拟仿真教学09.png"
+            ]
+            }
+        ]
+    },
+    {
+        id: 8,
+        title: "抽水蓄能电站虚拟仿真教学",
+        coverImage: "assets/images/抽水蓄能电站虚拟仿真教学/抽水蓄能电站虚拟仿真教学01.png",
+        description: "在项目中负责设计和开发抽水蓄能电站虚拟仿真教学场景，包括仿真所需模型的建模、特效。\n单人负责整个项目场景美术。",
+        imageGroups:  [
+            { 
+                title: "抽水蓄能电站虚拟仿真教学",
+                images: [// 图片路径数组（未分组）
+            "assets/images/抽水蓄能电站虚拟仿真教学/抽水蓄能电站虚拟仿真教学01.png",
+            "assets/images/抽水蓄能电站虚拟仿真教学/抽水蓄能电站虚拟仿真教学02.png",
+            "assets/images/抽水蓄能电站虚拟仿真教学/抽水蓄能电站虚拟仿真教学03.png"
+            ]
+            }
+        ]
+    },
+    {
+        id: 9,
+        title: "个人作品",
+        coverImage: "assets/images/个人作品/个人作品_封面.png",
+        description: "包含了一些技能展示。\n未完待续。",
+        imageGroups:  [
+           { 
+                title: "角色盔甲",
+                images: [// 图片路径数组（未分组）
+            "assets/images/个人作品/角色盔甲/角色盔甲01.png",
+            "assets/images/个人作品/角色盔甲/角色盔甲02.png",
+            "assets/images/个人作品/角色盔甲/角色盔甲03.png",
+            "assets/images/个人作品/角色盔甲/角色盔甲04.png"
+            ]
+            },
+            { 
+                title: "唐刀",
+                images: [// 图片路径数组（未分组）
+            "assets/images/个人作品/唐刀/唐刀01.png",
+            "assets/images/个人作品/唐刀/唐刀02.png",
+            "assets/images/个人作品/唐刀/唐刀03.png",
+            "assets/images/个人作品/唐刀/唐刀04.png"
+            ]
+            },
+            { 
+                title: "生物雕像",
+                images: [// 图片路径数组（未分组）
+            "assets/images/个人作品/生物雕像/生物雕像01.png",
+            "assets/images/个人作品/生物雕像/生物雕像02.png",
+            "assets/images/个人作品/生物雕像/生物雕像03.png",
+            "assets/images/个人作品/生物雕像/生物雕像04.png"
+            ]
+            },
+            { 
+                title: "科幻枪械",
+                images: [// 图片路径数组（未分组）
+            "assets/images/个人作品/科幻枪械/科幻枪械01.png",
+            "assets/images/个人作品/科幻枪械/科幻枪械02.png",
+            "assets/images/个人作品/科幻枪械/科幻枪械03.png"
+            ]
+            },
+            { 
+                title: "科幻手枪",
+                images: [// 图片路径数组（未分组）
+            "assets/images/个人作品/科幻手枪/科幻手枪.png"
+            ]
+            },
+            { 
+                title: "悟空雕像",
+                images: [// 图片路径数组（未分组）
+            "assets/images/个人作品/悟空雕像/悟空雕像.png"
+            ]
+            },
+            { 
+                title: "远古盾牌",
+                images: [// 图片路径数组（未分组）
+            "assets/images/个人作品/远古盾牌/远古盾牌.png"
+            ]
+            },
+            { 
+                title: "小刀",
+                images: [// 图片路径数组（未分组）
+            "assets/images/个人作品/小刀/小刀.png"
+            ]
+            },
+            { 
+                title: "中式村庄夜景",
+                images: [// 图片路径数组（未分组）
+            "assets/images/个人作品/中式村庄夜景/中式村庄夜景.png"
+            ]
+            },
+            { 
+                title: "熔岩平铺材质",
+                images: [// 图片路径数组（未分组）
+            "assets/images/个人作品/熔岩平铺材质/熔岩平铺材质01.png",
+            "assets/images/个人作品/熔岩平铺材质/熔岩平铺材质02.png"
+            ]
+            },
+            { 
+                title: "UE5基础材质球功能展示",
+                images: [// 图片路径数组（未分组）
+            ],
+            videos: [
+                "assets/images/个人作品/UE5基础材质球功能展示/UE5基础材质球功能展示.mp4"
+                // 在这里添加更多视频链接，按照需要排序
+            ]
+            },
+            { 
+                title: "UE5扫描线框材质展示",
+                images: [// 图片路径数组（未分组）
+            ],
+            videos: [
+                "assets/images/个人作品/UE5扫描线框材质展示/UE5扫描线框材质展示.mp4"
+                // 在这里添加更多视频链接，按照需要排序
+            ]
+            },
+            { 
+                title: "UE5光效材质展示",
+                images: [// 图片路径数组（未分组）
+            ],
+            videos: [
+                "assets/images/个人作品/UE5光效材质展示/UE5光效材质展示.mp4"
+                // 在这里添加更多视频链接，按照需要排序
+            ]
+            },
+            { 
+                title: "UE5空调外机渲染讲解视频",
+                images: [// 图片路径数组（未分组）
+            ],
+            videos: [
+                "assets/images/个人作品/UE5空调外机渲染讲解视频/UE5空调外机渲染讲解视频.mp4"
+                // 在这里添加更多视频链接，按照需要排序
             ]
             }
         ]

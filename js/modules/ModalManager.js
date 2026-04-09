@@ -108,6 +108,42 @@ class ModalManager {
             });
 
             groupContainer.appendChild(imagesContainer);
+
+            // 检查并添加单个视频元素（向后兼容）
+            if (group.video) {
+                const videoContainer = document.createElement('div');
+                videoContainer.className = 'mt-6 flex justify-center';
+                videoContainer.innerHTML = `
+                    <div class="inline-block rounded-lg overflow-hidden border border-gray-900">
+                        <video src=${group.video} controls class="max-w-2xl h-auto">
+                            您的浏览器不支持视频播放。
+                        </video>
+                    </div>
+                `;
+                groupContainer.appendChild(videoContainer);
+            }
+
+            // 检查并添加多个视频元素（新的排序方式）
+            if (group.videos && group.videos.length > 0) {
+                const videosContainer = document.createElement('div');
+                videosContainer.className = 'mt-6 space-y-6';
+
+                group.videos.forEach(videoUrl => {
+                    const videoWrapper = document.createElement('div');
+                    videoWrapper.className = 'flex justify-center';
+                    videoWrapper.innerHTML = `
+                        <div class="inline-block rounded-lg overflow-hidden border border-gray-900">
+                            <video src="${videoUrl}" controls class="max-w-2xl h-auto">
+                                您的浏览器不支持视频播放。
+                            </video>
+                        </div>
+                    `;
+                    videosContainer.appendChild(videoWrapper);
+                });
+
+                groupContainer.appendChild(videosContainer);
+            }
+
             this.elements.modalGallery.appendChild(groupContainer);
         });
     }
