@@ -21,7 +21,12 @@ export function initSmoothScroll() {
     e.preventDefault()
     lenis.scrollTo(target, { offset: -84, duration: 1.4 })
   })
-  if (typeof ScrollTrigger !== 'undefined') lenis.on('scroll', ScrollTrigger.update)
+  if (typeof ScrollTrigger !== 'undefined') {
+    lenis.on('scroll', ScrollTrigger.update)
+    // vReveal 的 ScrollTrigger 在子组件挂载时（Lenis 初始化前）创建，
+    // 这里补一次 refresh 以按 Lenis 接管后的滚动容器重算位置
+    ScrollTrigger.refresh()
+  }
 }
 
 /* ===== GSAP：Hero 入场时间线 ===== */

@@ -26,10 +26,10 @@ const list = computed(() =>
                 :class="{ active: filter === f }" @click="filter = f">{{ f }}</button>
       </div>
     </div>
-    <transition-group name="cardfade" tag="div" class="proj-grid">
+    <div class="proj-grid" v-reveal="'d2'">
       <ProjectCard v-for="(p, i) in list" :key="p.id"
                    :project="p" :index="i" @open="selected = $event" />
-    </transition-group>
+    </div>
     <LightBox :project="selected" @close="selected = null" />
   </section>
 </template>

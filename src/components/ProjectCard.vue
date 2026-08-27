@@ -14,7 +14,7 @@ const brief = computed(() => props.project.description.split('\n')[0])
 <template>
   <article class="p-card" v-tilt @click="emit('open', project)">
     <div class="p-media">
-      <img loading="lazy" :src="project.coverImage" :alt="project.title">
+      <img loading="eager" :src="project.coverImage" :alt="project.title">
       <div class="p-shine"></div>
       <div class="wm-layer"></div>
       <span class="p-index">{{ num }}</span>
