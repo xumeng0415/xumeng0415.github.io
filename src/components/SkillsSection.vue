@@ -7,7 +7,7 @@ import { APP_DATA } from '../data'
     <div class="sec-head" v-reveal>
       <span class="sec-tag">// SKILL_MATRIX</span>
       <h2 class="sec-title">技能<span class="hl">矩阵</span></h2>
-      <p class="sec-sub">以 UE5 与 Unity 为核心引擎，贯通建模、材质、地编到优化的完整管线。</p>
+      <p class="sec-sub">以 UE5 与 Unity 为核心引擎，贯通建模、材质、动画到交互开发以及优化的完整管线。</p>
     </div>
     <div class="skills-wrap">
       <div v-reveal>

@@ -9,26 +9,25 @@ export const APP_DATA = {
     { id: 'contact',    label: '联系' }
   ],
 
-  typed: ['游戏影视三维场景', '次时代模型全流程', 'UE5 / Unity 场景地编', '数字孪生可视化', 'Shader 开发 × 性能优化'],
+  typed: [ '数字孪生开发', 'UE5 / Unity 场景地编', '游戏影视三维场景', '次时代模型全流程', 'Shader 开发', '性能优化'],
 
-  marq: ['三维场景艺术', '✦', '场景地编', '✦', '关卡设计', '✦', '虚拟仿真', '✦', 'UE5', '✦', 'UNITY', '✦', 'SHADER', '✦', '凡人修仙传', '✦', '数字孪生', '✦'],
+  marq: ['数字孪生开发', '✦', '虚拟仿真', '✦', '三维美术场景', '✦', '场景地编', '✦', 'UE5', '✦', 'UNITY', '✦', 'SHADER', '✦', '凡人修仙传', '✦'],
 
   stats: [
     { n: 3,  s: '+', label: '年从业经验' },
-    { n: 9,  s: '+', label: '项目作品' },
-    { n: 52, s: '',  label: '集番剧镜头参与' },
+    { n: 11,  s: '+', label: '项目作品' },
     { n: 11, s: '',  label: '项专业技能' }
   ],
 
   aboutRows: [
     ['姓名', '徐蒙'],
-    ['职业', '三维场景艺术家'],
+    ['职业', '数字孪生开发工程师'],
     ['毕业院校', '金陵科技学院'],
     ['专业', '数字媒体艺术 · 学士'],
-    ['现任职', '闻道之萌（南京）科技']
+    ['现任职', '立臻精密智造（昆山）有限公司']
   ],
 
-  caps: ['次时代模型全流程', '场景地编', '白盒搭建', '关卡设计 LLD', '灯光渲染', 'Shader 开发', '特效制作', '场景性能优化', '原画拆分', '氛围图制作', '资产模块化', 'Sequence 离线渲染'],
+  caps: ['蓝图交互开发', 'C++开发', '次时代模型全流程', '场景地编', '灯光渲染', 'Shader 开发', '特效制作', '场景性能优化'],
 
   timeline: [
     {
@@ -47,7 +46,7 @@ export const APP_DATA = {
         '2022.12-2023.06 进入岗位实习，进行次时代模型全流程的工作以及影视地编岗位初步学习。',
         '实习转正后获得公司「明日之星」奖项并参与年会获奖，自我定位为生产型艺术家。',
         '2023.07-2024.05 负责《凡人修仙传》影视场景白盒搭建到最终渲染分镜场景。',
-        '2024.06 转岗游戏事业部，负责次时代 3A 三端开放大世界游戏的关卡设计：白盒搭建 → 最终关卡 → 场景性能优化 → 原画拆分及氛围图制作。'
+        '2024.06-2024.11 转岗游戏事业部，负责次时代 3A 三端开放大世界游戏的关卡设计：白盒搭建 → 最终关卡 → 场景性能优化 → 原画拆分及氛围图制作。'
       ],
       medal: '🏆 明日之星奖项 · 年会获奖'
     },
@@ -55,29 +54,43 @@ export const APP_DATA = {
       type: 'WORK EXPERIENCE · NOW', work: true,
       role: '虚拟仿真三维场景设计师',
       company: '闻道之萌（南京）科技有限公司',
-      date: '2024.11 - 至今', now: true,
+      date: '2024.11 - 2026.04', now: true,
       list: [
-        '负责数字孪生及可视化项目的 Unity & UE5 场景美术开发：灯光、地形、模型资产、场景性能监控、美术资产模块化拆分。',
-        '负责场景部分特效制作，以及 Unity 和 UE5 的 Shader 开发。',
-        '优化场景，使项目适配桌面端 / 移动端 / 网页端。',
-        '配合项目负责人在 UE5 中利用 Sequence 渲染高精度离线视频并剪辑成片。'
+        '负责数字孪生及可视化项目的 Unity & UE5 场景美术开发：灯光、地形与模型资产搭建，完成美术资产模块化拆分，并进行场景性能监控。',
+        '负责场景相关特效制作，以及 Unity / UE5 双引擎的 Shader 开发。',
+        '针对多端发布需求优化场景性能，使项目适配桌面端 / 移动端 / 网页端展示。',
+      ],
+      medal: null
+    },
+    {
+      type: 'WORK EXPERIENCE · NOW', work: true,
+      role: '数字孪生交互开发工程师',
+      company: '立臻精密智造（昆山）有限公司',
+      date: '2026.04 - 至今', now: true,
+      list: [
+        '负责立臻全球多个厂区数字孪生项目的 UE5 场景美术开发：灯光、地形、模型资产与 Shader 制作，兼顾场景性能监控与优化。',
+        '负责厂区自动化设备的机械臂及部件动画制作，编写生产线设备蓝图，接入实时 PLC 信号，将物理设备状态实时映射到孪生场景中进行监控。',
+        '针对性优化场景性能，使项目满足实时推流要求，实现厂区数字孪生的远程展示。',
+        '配合项目负责人在 UE5 中利用 Sequence 渲染高精度离线视频并剪辑成片，用于项目汇报与成果沉淀。'
       ],
       medal: null
     }
   ],
 
   skillBars: [
-    { n: 'Unreal Engine 5',     m: 'UE5', p: 92, d: '地编 / 灯光 / Shader / Sequence' },
-    { n: 'Unity',               m: 'UNI', p: 85, d: '数字孪生 / 多端适配' },
-    { n: 'Blender',             m: 'BL',  p: 88, d: '建模 / 场景资产' },
-    { n: 'Substance Painter',   m: 'SP',  p: 90, d: 'PBR 材质贴图' },
-    { n: 'ZBrush',              m: 'ZB',  p: 82, d: '高模雕刻' },
-    { n: 'Substance Designer',  m: 'SD',  p: 75, d: '程序化材质' }
+    { n: 'Unreal Engine 5',     m: 'UE5',   p: 92, d: '地编 / 灯光 / Shader / 蓝图 / C++' },
+    { n: 'Unity',               m: 'UNI',   p: 85, d: '数字孪生 / 多端适配' },
+    { n: 'Maya',                m: 'Maya',  p: 88, d: '建模 / 场景资产' },
+    { n: 'Blender',             m: 'BL',    p: 88, d: '建模 / 场景资产' },
+    { n: 'Substance Painter',   m: 'SP',    p: 90, d: 'PBR 材质贴图' },
+    { n: 'Substance Designer',  m: 'SD',    p: 75, d: '程序化材质' },
+    { n: 'ZBrush',              m: 'ZB',    p: 82, d: '高模雕刻' }
+   
   ],
-  alsoSkills: ['Maya', '3ds Max', 'Photoshop', 'Marvelous Designer', 'Houdini'],
-  pipeline: ['PBR 流程', 'Trim Sheet', '地形雕刻', '植被散布', '光照烘焙', 'Lumen/Nanite', 'URP/HDRP', 'LOD 与合批', '分镜氛围'],
+  alsoSkills: ['3ds Max', 'Photoshop', 'Marvelous Designer', 'Houdini'],
+  pipeline: ['数字孪生可视化', 'PLC 实时数据对接', '远程推流展示', 'PBR 流程', 'Trim Sheet', '地形雕刻', '光照烘焙', 'Lumen/Nanite', 'LOD 与合批'],
 
-  filters: ['全部', '影视动画', '游戏项目', '虚拟仿真', '个人作品'],
+  filters: ['全部', '孪生仿真', '影视动画', '游戏项目', '个人作品'],
 
   contacts: [
     { label: 'EMAIL',  icon: 'mdi:email',          value: '2542355162@qq.com', rgb: '242,193,78', btn: '复制邮箱' },
@@ -108,7 +121,7 @@ export const APP_DATA = {
       ]
     },
     {
-      id: 3, cat: '虚拟仿真', secret: false,
+      id: 3, cat: '孪生仿真', secret: false,
       title: '家用冰箱虚拟仿真教学',
       coverImage: 'assets/images/家用冰箱虚拟仿真教学/家用冰箱虚拟仿真教学封面图.png',
       description: '负责设计和开发家用冰箱的虚拟仿真教学场景，包括仿真所需模型的建模、特效。\n单人负责整个项目场景美术。',
@@ -117,7 +130,7 @@ export const APP_DATA = {
       ]
     },
     {
-      id: 4, cat: '虚拟仿真', secret: false,
+      id: 4, cat: '孪生仿真', secret: false,
       title: '大型冷库虚拟仿真教学',
       coverImage: 'assets/images/大型冷库虚拟仿真教学/大型冷库虚拟仿真教学封面图.png',
       description: '负责设计和开发大型冷库虚拟仿真教学场景，包括仿真所需模型的建模、特效。\n单人负责整个项目场景美术。',
@@ -126,7 +139,7 @@ export const APP_DATA = {
       ]
     },
     {
-      id: 5, cat: '虚拟仿真', secret: false,
+      id: 5, cat: '孪生仿真', secret: false,
       title: '市政给排水虚拟仿真教学',
       coverImage: 'assets/images/市政给排水虚拟仿真教学/市政给排水虚拟仿真教学封面图.png',
       description: '负责设计和开发市政给排水虚拟仿真教学场景，包括仿真所需模型的建模、特效。\n单人负责整个项目场景美术。',
@@ -135,7 +148,7 @@ export const APP_DATA = {
       ]
     },
     {
-      id: 6, cat: '虚拟仿真', secret: false,
+      id: 6, cat: '孪生仿真', secret: false,
       title: '集中空调虚拟仿真教学',
       coverImage: 'assets/images/集中空调虚拟仿真教学/集中空调虚拟仿真教学封面图.png',
       description: '负责设计和开发集中空调虚拟仿真教学场景，包括仿真所需模型的建模、特效。\n单人负责整个项目场景美术。',
@@ -144,7 +157,7 @@ export const APP_DATA = {
       ]
     },
     {
-      id: 7, cat: '虚拟仿真', secret: false,
+      id: 7, cat: '孪生仿真', secret: false,
       title: '氢燃料电池虚拟仿真教学',
       coverImage: 'assets/images/氢燃料电池虚拟仿真教学/氢燃料电池虚拟仿真教学封面图.png',
       description: '负责设计和开发氢燃料电池虚拟仿真教学场景，包括仿真所需模型的建模、特效。\n单人负责整个项目。',
@@ -153,7 +166,7 @@ export const APP_DATA = {
       ]
     },
     {
-      id: 8, cat: '虚拟仿真', secret: false,
+      id: 8, cat: '孪生仿真', secret: false,
       title: '抽水蓄能电站虚拟仿真教学',
       coverImage: 'assets/images/抽水蓄能电站虚拟仿真教学/抽水蓄能电站虚拟仿真教学03.png',
       description: '负责设计和开发抽水蓄能电站虚拟仿真教学场景，包括仿真所需模型的建模、特效。\n单人负责整个项目场景美术。',

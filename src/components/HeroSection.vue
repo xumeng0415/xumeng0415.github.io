@@ -32,7 +32,7 @@ onBeforeUnmount(() => io && io.disconnect())
   <header class="hero" id="home">
     <div class="hero-watermark">XUMENG</div>
     <div class="hero-grid-floor"></div>
-    <div class="hero-eyebrow"><i></i>PORTFOLIO · 三维场景艺术家 · 2026</div>
+    <div class="hero-eyebrow"><i></i>PORTFOLIO · 数字孪生开发工程师 · 2026</div>
     <h1 class="hero-name" data-text="徐蒙">徐蒙</h1>
     <div class="typing-wrap">
       <span class="prefix">&gt;_</span><span>{{ text }}</span><span class="caret"></span>
