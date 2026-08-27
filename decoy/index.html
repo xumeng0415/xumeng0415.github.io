@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>XUMENG</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+        Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: #ffffff;
+      color: #202124;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 24px;
+    }
+
+    .logo {
+      font-size: 58px;
+      font-weight: 500;
+      letter-spacing: 4px;
+      margin-bottom: 34px;
+      user-select: none;
+    }
+    .logo .c1 { color: #4285F4; }
+    .logo .c2 { color: #EA4335; }
+    .logo .c3 { color: #FBBC05; }
+    .logo .c4 { color: #4285F4; }
+    .logo .c5 { color: #34A853; }
+    .logo .c6 { color: #EA4335; }
+
+    .tabs {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .tab {
+      border: 1px solid #dfe1e5;
+      background: #f8f9fa;
+      color: #3c4043;
+      padding: 7px 16px;
+      border-radius: 18px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background .15s, border-color .15s, box-shadow .15s;
+    }
+    .tab:hover { background: #f1f3f4; }
+    .tab.active {
+      background: #e8f0fe;
+      border-color: #4285F4;
+      color: #1967d2;
+      font-weight: 600;
+    }
+
+    .search {
+      display: flex;
+      width: 100%;
+      max-width: 584px;
+      box-shadow: 0 1px 6px rgba(32,33,36,.18);
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid #dfe1e5;
+    }
+    .search:focus-within { box-shadow: 0 1px 10px rgba(32,33,36,.28); }
+    .input {
+      flex: 1;
+      border: none;
+      outline: none;
+      padding: 14px 20px;
+      font-size: 16px;
+      color: #202124;
+      background: transparent;
+    }
+    .btn {
+      border: none;
+      border-left: 1px solid #dfe1e5;
+      background: #f8f9fa;
+      color: #3c4043;
+      padding: 0 22px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background .15s;
+    }
+    .btn:hover { background: #f1f3f4; }
+
+    .hint {
+      margin-top: 18px;
+      font-size: 12px;
+      color: #9aa0a6;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 14px;
+      font-size: 12px;
+      color: #bdc1c6;
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <span class="c1">X</span><span class="c2">U</span><span class="c3">M</span><span class="c4">E</span><span class="c5">N</span><span class="c6">G</span>
+  </div>
+
+  <div class="tabs" id="tabs">
+    <button type="button" class="tab" data-engine="baidu">Baidu</button>
+    <button type="button" class="tab active" data-engine="google">Google</button>
+    <button type="button" class="tab" data-engine="bing">Bing</button>
+    <button type="button" class="tab" data-engine="yandex">Yandex</button>
+  </div>
+
+  <form class="search" id="form" autocomplete="off">
+    <input type="text" id="q" class="input" placeholder="输入关键词开始搜索…" aria-label="搜索" />
+    <button type="submit" class="btn">搜索</button>
+  </form>
+
+  <div class="hint" id="hint">当前引擎：Google</div>
+
+  <footer>XUMENG Search</footer>
+
+  <script>
+    const engines = {
+      baidu:  q => 'https://www.baidu.com/s?wd=' + encodeURIComponent(q),
+      google: q => 'https://www.google.com/search?q=' + encodeURIComponent(q),
+      bing:   q => 'https://www.bing.com/search?q=' + encodeURIComponent(q),
+      yandex: q => 'https://yandex.com/search/?text=' + encodeURIComponent(q),
+    };
+    const labels = { baidu: 'Baidu', google: 'Google', bing: 'Bing', yandex: 'Yandex' };
+
+    let current = 'google';
+
+    const tabs = document.getElementById('tabs');
+    const hint = document.getElementById('hint');
+
+    tabs.addEventListener('click', e => {
+      const btn = e.target.closest('.tab');
+      if (!btn) return;
+      current = btn.dataset.engine;
+      tabs.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t === btn));
+      hint.textContent = '当前引擎：' + labels[current];
+    });
+
+    document.getElementById('form').addEventListener('submit', e => {
+      e.preventDefault();
+      const q = document.getElementById('q').value.trim();
+      if (!q) return;
+      const url = engines[current](q);
+      window.open(url, '_blank', 'noopener');
+    });
+  </script>
+</body>
+</html>

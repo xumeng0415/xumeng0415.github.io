@@ -6,5 +6,5 @@ export default defineConfig({
   plugins: [vue({
     template: { compilerOptions: { isCustomElement: tag => tag === 'iconify-icon' } }
   })],
-  build: { chunkSizeWarningLimit: 900 }
+  build: { outDir: 'dist/works', chunkSizeWarningLimit: 900 }
 })
